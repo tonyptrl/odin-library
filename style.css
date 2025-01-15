@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/quicksand/v12/NUEnA3aH3nNHQv-0zBJ2lS3teM.woff2') format('woff2');
+}
+
+* {
+  font-family: 'Quicksand';
+}
+
+body {
+  background-color: #FEF6DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  width: 1000px;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-book-button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #FEF6DF;
+  font-weight: bold;
+  font-size: 16px;
+  border: solid 2px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.library {
+  background-color: #FDFAE8;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
