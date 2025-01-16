@@ -31,12 +31,12 @@ h1 {
   text-align: center;
 }
 
-.add-book-button {
+.add-book-button-container {
   display: flex;
   justify-content: center;
 }
 
-button {
+.add-book-button {
   background-color: #FEF6DF;
   font-weight: bold;
   font-size: 16px;
@@ -48,6 +48,10 @@ button {
 .library {
   background-color: #FDFAE8;
   margin-top: 20px;
+}
+
+.card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 10px;
 }
