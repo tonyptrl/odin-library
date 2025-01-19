@@ -31,7 +31,7 @@ function displayBooks() {
     <div>${myLibrary[i].title}</div>
     <div>${myLibrary[i].author}</div>
     <div>${myLibrary[i].pages}</div>
-    <div>${myLibrary[i].status}</div>
+    <button class="status-button-${[i]}">${myLibrary[i].status}</button>
     <button class="delete-button-${[i]}">delete</div>
     `;
 
@@ -41,6 +41,17 @@ function displayBooks() {
     delBtn.addEventListener('click', function() {
       myLibrary.splice([i], 1);
       displayBooks();
+    });
+
+    let statusBtn = document.querySelector(`.status-button-${[i]}`);
+    statusBtn.addEventListener('click', function() {
+      if (myLibrary[i].status === "read") {
+        myLibrary[i].status = "not read";
+        displayBooks();
+      } else {
+        myLibrary[i].status = "read";
+        displayBooks();
+      };
     });
   };
 };
