@@ -8,20 +8,12 @@ function Book(title, author, pages, status) {
   this.author = author;
   this.pages = pages;
   this.status = status;
-  this.info = function() {
-    return(`${this.title}, by ${this.author}, ${this.pages} pages, ${this.status}`);
-  };
 };
 
 function addBookToLibrary(title, author, pages, status) {
-  /*
-  myLibrary.push({
-    title: title,
-    author: author,
-    pages: pages,
-    status: status
-  });
-  */
+  const newBook = new Book(title, author, pages, status);
+    myLibrary.push(newBook);
+    displayBooks();
 };
 
 const card = document.createElement('div');
@@ -44,6 +36,7 @@ function displayBooks() {
     `;
 
     container.appendChild(card);
+
     let delBtn = document.querySelector(`.delete-button-${[i]}`);
     delBtn.addEventListener('click', function() {
       myLibrary.splice([i], 1);
@@ -62,12 +55,15 @@ addBookBtn.addEventListener('click', function() {
 });
 
 const form = document.getElementById('addBookForm');
-
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-});
 
-/*
-const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'not read yet');
-console.log(theHobbit.info());
-*/
+  const title = form.title.value;
+  const author = form.author.value;
+  const pages = form.pages.value;
+  const status = form.status.value;
+
+  addBookToLibrary(title, author, pages, status);
+  dialog.close();
+  form.reset();
+});
