@@ -3,17 +3,25 @@ const myLibrary = [
   {title: 'Atomic Habits', author: 'James Clear', pages: '320', status: 'not read'}
 ];
 
-function Book() {
-  // the constructor...
-}
+function Book(title, author, pages, status) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.status = status;
+  this.info = function() {
+    return(`${this.title}, by ${this.author}, ${this.pages} pages, ${this.status}`);
+  };
+};
 
-function addBookToLibrary(bookTitle, author, pages, status) {
+function addBookToLibrary(title, author, pages, status) {
+  /*
   myLibrary.push({
-    title: bookTitle,
+    title: title,
     author: author,
     pages: pages,
     status: status
   });
+  */
 };
 
 const card = document.createElement('div');
@@ -53,20 +61,13 @@ addBookBtn.addEventListener('click', function() {
   dialog.showModal();
 });
 
-//addBookToLibrary('50th law', 'Robert Greene', '350', 'read');
-//addBookToLibrary('51th law', 'Robert Greene', '350', 'read');
+const form = document.getElementById('addBookForm');
 
-    /*
-    function Book(name, author, pages, status) {
-      this.name = name;
-      this.author = author;
-      this.pages = pages;
-      this.status = status;
-      this.info = function() {
-        return(`${this.name}, by ${this.author}, ${this.pages} pages, ${this.status}`);
-      };
-    };
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+});
 
-    const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'not read yet');
-    console.log(theHobbit.info());
-    */
+/*
+const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'not read yet');
+console.log(theHobbit.info());
+*/
