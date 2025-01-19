@@ -32,15 +32,26 @@ function displayBooks() {
     <div>${myLibrary[i].author}</div>
     <div>${myLibrary[i].pages}</div>
     <div>${myLibrary[i].status}</div>
-    <button class="delete-button">delete</div>
+    <button class="delete-button-${[i]}">delete</div>
     `;
 
     container.appendChild(card);
+    let delBtn = document.querySelector(`.delete-button-${[i]}`);
+    delBtn.addEventListener('click', function() {
+      myLibrary.splice([i], 1);
+      displayBooks();
+    });
   };
-
 };
 
 displayBooks();
+
+const addBookBtn = document.querySelector('.add-book-button');
+const dialog = document.getElementById('addBookDialog');
+
+addBookBtn.addEventListener('click', function() {
+  dialog.showModal();
+});
 
 //addBookToLibrary('50th law', 'Robert Greene', '350', 'read');
 //addBookToLibrary('51th law', 'Robert Greene', '350', 'read');

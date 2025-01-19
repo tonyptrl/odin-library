@@ -9,12 +9,43 @@
 <body>
   <div class="container">
       <h1>your minimalist library</h1>
+
       <div class="add-book-button-container">
         <button class="add-book-button">add a book</button>
+        <dialog id="addBookDialog">
+          <form method="dialog">
+            <form method="dialog">
+              <label for="bookTitle">title:</label>
+              <input type="text" id="bookTitle" name="bookTitle" required>
+          
+              <label for="bookAuthor">author:</label>
+              <input type="text" id="bookAuthor" name="bookAuthor" required>
+          
+              <label for="bookPages">number of pages:</label>
+              <input type="text" id="bookPages" name="bookPages" required>
+          
+              <fieldset>
+                  <legend>status:</legend>
+                  <label>
+                      <input type="radio" id="wantToRead" name="bookStatus" value="Want to read" required>
+                      want to read
+                  </label><br>
+                  <label>
+                      <input type="radio" id="read" name="bookStatus" value="Read" required>
+                      read
+                  </label>
+              </fieldset>
+
+            <button type="submit" value="confirm">add</button>
+            <button type="button" onclick="document.getElementById('addBookDialog').close()">close</button>
+          </form>
+        </dialog>
       </div>
+
     <div class="library">
       <div class="card-container" id="cardContainer"></div>
     </div>
+    
   </div>
   
   <script src="script.js"></script>
