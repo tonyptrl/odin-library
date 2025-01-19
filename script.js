@@ -31,19 +31,21 @@ function displayBooks() {
     <div>${myLibrary[i].title}</div>
     <div>${myLibrary[i].author}</div>
     <div>${myLibrary[i].pages}</div>
-    <button class="status-button-${[i]}">${myLibrary[i].status}</button>
-    <button class="delete-button-${[i]}">delete</div>
+    <button class="status-button js-status-button-${[i]}">${myLibrary[i].status}</button>
+    <div class="delete-button js-delete-button-${[i]}">
+      <img src="icons/trash.svg" alt="delete">
+    </div>
     `;
 
     container.appendChild(card);
 
-    let delBtn = document.querySelector(`.delete-button-${[i]}`);
+    let delBtn = document.querySelector(`.js-delete-button-${[i]}`);
     delBtn.addEventListener('click', function() {
       myLibrary.splice([i], 1);
       displayBooks();
     });
 
-    let statusBtn = document.querySelector(`.status-button-${[i]}`);
+    let statusBtn = document.querySelector(`.js-status-button-${[i]}`);
     statusBtn.addEventListener('click', function() {
       if (myLibrary[i].status === "read") {
         myLibrary[i].status = "not read";

@@ -63,3 +63,16 @@ dialog {
 fieldset {
   margin: 20px;
 }
+
+.status-button {
+  background-color: #FDFAE8;
+  padding: 5px 10px;
+  width: 100px;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.delete-button {
+  cursor: pointer;
+  width: 24px;
+}
