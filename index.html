@@ -26,8 +26,8 @@
             <fieldset>
                 <legend>status:</legend>
                 <label>
-                    <input type="radio" id="wantToRead" name="status" value="Want to read" required>
-                    want to read
+                    <input type="radio" id="notRead" name="status" value="not read" required>
+                    not read
                 </label><br>
                 <label>
                     <input type="radio" id="read" name="status" value="Read" required>
@@ -35,8 +35,8 @@
                 </label>
             </fieldset>
 
-            <button type="submit" value="confirm">add</button>
-            <button type="button" onclick="document.getElementById('addBookDialog').close()">close</button>
+            <button class="add-button" type="submit" value="confirm">add</button>
+            <button class="close-button" type="button" onclick="document.getElementById('addBookDialog').close()">close</button>
           </form>
         </dialog>
       </div>

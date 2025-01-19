@@ -1,12 +1,12 @@
 const myLibrary = [
-  {title: '50th law', author: 'Robert Greene', pages: '350', status: 'read'},
-  {title: 'Atomic Habits', author: 'James Clear', pages: '320', status: 'not read'}
+  {title: '50th law', author: 'Robert Greene', pages: '350 pages', status: 'read'},
+  {title: 'Atomic Habits', author: 'James Clear', pages: '320 pages', status: 'not read'}
 ];
 
 function Book(title, author, pages, status) {
   this.title = title;
   this.author = author;
-  this.pages = pages;
+  this.pages = `${pages} pages`;
   this.status = status;
 };
 

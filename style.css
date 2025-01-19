@@ -8,6 +8,7 @@
 
 * {
   font-family: 'Quicksand';
+  color: #272727;
 }
 
 body {
@@ -40,35 +41,52 @@ h1 {
   background-color: #FEF6DF;
   font-weight: bold;
   font-size: 16px;
-  border: solid 2px;
+  border: solid 1px;
+  border-color: #272727;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .library {
   background-color: #FDFAE8;
+  width: 1000px;
   margin-top: 20px;
+  padding: 10px 10px
 }
 
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border: solid 1px;
+  border-color: #fef4df;
+  padding: 5px;
+  grid-template-columns: 4fr 3fr 2fr 2fr 1fr;
+  align-items: center;
   margin-top: 10px;
 }
 
 dialog {
   padding: 20px;
+  border: none;
 }
 
 fieldset {
   margin: 20px;
 }
 
-.status-button {
+.add-button, .close-button {
+  cursor: pointer;
   background-color: #FDFAE8;
+  padding: 5px 10px;
+  border: solid 1px;
+  border-color: #272727;
+}
+
+.status-button {
+  background-color: #fef4df;
   padding: 5px 10px;
   width: 100px;
   border: solid 1px;
+  border-color: #fef4df;
   cursor: pointer;
 }
 
